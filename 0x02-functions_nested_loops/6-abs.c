@@ -7,7 +7,7 @@
  * Return: Always 0.
  */
 
-int _abs(int)
+int _abs(int i)
 {
-	return (int < 0 ? -int : int);
+	return (i < 0 ? -i : i);
 }
