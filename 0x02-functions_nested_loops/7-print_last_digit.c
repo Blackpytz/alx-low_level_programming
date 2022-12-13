@@ -20,7 +20,6 @@ int print_last_digit(int i)
 		j = i % 10;
 	}
 	_putchar('0' + j);
-	_putchar('\n');
 
 	return (j);
 }
