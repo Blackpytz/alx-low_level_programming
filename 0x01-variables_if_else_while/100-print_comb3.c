@@ -15,20 +15,21 @@ int main(void)
 		j = 48;
 		while (j < 58)
 		{
-			if (i < j && j != i)
+			if (i != j && i < j)
 			{
 				putchar(i);
 				putchar(j);
-				j++;
 			}
-			if (!(i < 56 && j < 57))
+			if (!(i == 56 && j == 57))
 			{
 				putchar(',');
 				putchar(' ');
 			}
+			j++;
 		}
-		putchar('\n');
 		i++;
 	}
+	putchar('\n');
+
 	return (0);
 }
