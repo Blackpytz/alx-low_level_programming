@@ -17,12 +17,12 @@ void times_table(void)
 		for (j = 0; j < 10; j++)
 		{
 			k = i * j;
-			_putchar(k / 10 + 48);
-			_putchar(k % 10 + 48);
+			printf("%d", k);
 
 			if (j < 9)
 			{
 				_putchar(',');
+				_putchar(' ');
 				_putchar(' ');
 			}
 		}
