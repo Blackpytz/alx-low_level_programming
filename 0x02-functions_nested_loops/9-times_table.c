@@ -17,7 +17,7 @@ void times_table(void)
 		for (j = 48; j < 58; j++)
 		{
 			k = i * j;
-			putchar(k);
+			printf("%d", k);
 
 			if (j < 57)
 			{
