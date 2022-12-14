@@ -19,7 +19,7 @@ void times_table(void)
 			k = i * j;
 			printf("%d", k);
 
-			if (j < 57)
+			if (j < 9)
 			{
 				putchar(',');
 				putchar(' ');
