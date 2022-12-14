@@ -3,7 +3,7 @@
 /**
  * times_table - prints the 9 times table
  *
- * Return: Nothing.
+ * Return: void.
  */
 
 void times_table(void)
@@ -15,18 +15,25 @@ void times_table(void)
 		for (j = 0; j < 10; j++)
 		{
 			k = i * j;
-
 			if (k >= 10)
 			{
 				_putchar(k / 10 + 48);
 				_putchar(k % 10 + 48);
+				if (j < 9)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 			}
 			else
 			{
 				_putchar(' ');
 				_putchar(k + 48);
-				_putchar(',');
-				_putchar(' ');
+				if (j < 9)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 			}
 		}
 		_putchar('\n');
