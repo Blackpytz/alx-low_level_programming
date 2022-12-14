@@ -22,7 +22,7 @@ void times_table(void)
 			if (j < 58)
 			{
 				putchar(',');
-				putchar('  ');
+				putchar(' ');
 			}
 		}
 		putchar('\n');
