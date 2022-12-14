@@ -12,14 +12,14 @@ void times_table(void)
 	int j;
 	int k;
 
-	for (i = 0; i < 10; i++)
+	for (i = 48; i < 58; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 48; j < 58; j++)
 		{
 			k = i * j;
 			putchar(k);
 
-			if (j < 58)
+			if (j < 57)
 			{
 				putchar(',');
 				putchar(' ');
