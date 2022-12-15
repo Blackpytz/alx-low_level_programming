@@ -11,11 +11,11 @@ void print_to_98(int n)
 {
 	int v;
 
-	for (v = n; v > 98; v++)
+	for (v = n; v > 98; v--)
 	{
 		if (n > 98)
 		{
-			printf("%d' ", v);
+			printf("%d, ", v);
 		}
 		else
 		{
@@ -23,7 +23,7 @@ void print_to_98(int n)
 			{
 				printf("%d, ", v);
 			}
-			printf("98\n");
 		}
 	}
+	printf("%d\n");
 }
