@@ -9,13 +9,11 @@
 
 int print_numbers(void)
 {
-	int j;
-	int i = 0;
+	int i = 48;
 
-	while (i < 10)
+	while (i < 58)
 	{
-		j = 48;
-		_putchar(j);
+		_putchar(i);
 		i++;
 	}
 	_putchar('\n');
