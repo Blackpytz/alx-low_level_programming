@@ -9,7 +9,8 @@
 
 int print_numbers(void)
 {
-	int i = 0, j;
+	int j;
+	int i = 0;
 
 	while (i < 10)
 	{
