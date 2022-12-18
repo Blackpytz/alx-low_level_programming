@@ -12,7 +12,7 @@ int main(void)
 
 	while (x <= 100)
 	{
-		if (x % 3 == 0)
+		if ((x % 3 == 0) && (x % 5 == 0))
 		{
 			printf("Fizz ");
 		}
@@ -20,9 +20,9 @@ int main(void)
 		{
 			printf("Buzz ");
 		}
-		else if ((x % 3 == 0) && (x % 5 == 0))
+		else if (x % 3 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("Fizz ");
 		}
 		else
 		{
