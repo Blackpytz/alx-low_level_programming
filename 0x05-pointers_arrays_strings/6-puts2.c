@@ -14,9 +14,9 @@ void puts2(char *str)
 	x = 0;
 	while (str[x])
 	{
-		if (str[x] % 2 == 0)
+		if (x % 2 == 0)
 		{
-			putchar(*str);
+			putchar(str[x]);
 		}
 		x++;
 	}
