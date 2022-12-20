@@ -29,6 +29,7 @@ int main(void)
 			printf("%d ", x);
 		}
 		x++;
+		_putchar('\n');
 	}
 
 	return (0);
