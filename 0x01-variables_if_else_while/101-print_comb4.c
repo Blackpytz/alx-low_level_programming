@@ -1,41 +1,40 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible different
- * combinations of three digits.
+ *main - Entry point
  *
- * Return: Always 0.
+ *Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int a = 48, b = 48, c = 48;
+	int d = 48, a = 48, i = 48;
 
-	while (a < 58)
+	while (d < 58)
 	{
-		b = 48;
-		while (b < 58)
+		a = 48;
+		while (a < 58)
 		{
-			c = 48;
-			while (c < 58)
+			i = 48;
+			while (i < 58)
 			{
-				if (a != b && b != c && a != c && a < b && b < c)
+				if (d != a && a != i && d != i && d < a && a < i)
 				{
+					putchar(d);
 					putchar(a);
-					putchar(b);
-					putchar(c);
-					if (!(a == 55 && b == 56 && c == 57))
+					putchar(i);
+					if (!(d == 55 && a == 56 && i == 57))
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
-				c++;
+				i++;
 			}
-			b++;
+			a++;
 		}
-		c++;
+		d++;
 	}
 	putchar('\n');
+
 	return (0);
 }
