@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int a, b, c = 48;
+	int a = 48, b = 48, c = 48;
 
 	while (a < 58)
 	{
