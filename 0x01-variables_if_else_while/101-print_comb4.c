@@ -13,8 +13,10 @@ int main(void)
 
 	while (a < 58)
 	{
+		b = 48;
 		while (b < 58)
 		{
+			c = 48;
 			while (c < 58)
 			{
 				if (a != b && b != c && a != c && a < b && b < c)
