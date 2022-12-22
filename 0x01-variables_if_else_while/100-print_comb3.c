@@ -1,33 +1,33 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible different combinations of two digits
+ *main - Entry point
  *
- * Return: 0
+ *Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int i = 48, j;
+	int d = 48, a = 48;
 
-	while (i < 58)
+	while (d < 58)
 	{
-		j = 48;
-		while (j < 58)
+		a = 48;
+		while (a < 58)
 		{
-			if (i != j && i < j)
+			if (d != a && d < a)
 			{
-				putchar(i);
-				putchar(j);
+				putchar(d);
+				putchar(a);
+
+				if (!(d == 56 && a == 57))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-			if (!(i == 56 && j == 57))
-			{
-				putchar(',');
-				putchar(' ');
-			}
-			j++;
+			a++;
 		}
-		i++;
+		d++;
 	}
 	putchar('\n');
 
