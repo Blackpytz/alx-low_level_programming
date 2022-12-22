@@ -17,15 +17,15 @@ int main(void)
 		{
 			while (c < 58)
 			{
-				if (a != b && b != i && a != i && a < b && b < c)
+				if (a != b && b != c && a != c && a < b && b < c)
 				{
-					_putchar(a);
-					_putchar(b);
-					_putchar(c);
+					putchar(a);
+					putchar(b);
+					putchar(c);
 					if (!(a == 55 && b == 56 && c == 57))
 					{
-						_putchar(',');
-						_putchar(' ');
+						putchar(',');
+						putchar(' ');
 					}
 				}
 				c++;
@@ -34,6 +34,6 @@ int main(void)
 		}
 		c++;
 	}
-	_putchar('\n');
+	putchar('\n');
 	return (0);
 }
