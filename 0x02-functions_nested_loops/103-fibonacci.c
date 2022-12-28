@@ -9,22 +9,21 @@
 
 int main(void)
 {
-	unsigned long int x, y, z, t1, t2;
+	unsigned long int temp, y, t1, t2;
 
-	t1 = 1;
-	t2 = 2;
-	x = 0;
+	t1 = 0;
+	t2 = 1;
+	temp = 0;
 	y = 0;
-	z = 0;
-	for (; x < 4000000; x++)
+	while (temp < 4000000)
 	{
-		y = t1 + t2;
+		temp = t1 + t2;
 		t1 = t2;
-		t2 = y;
-		if (t1 % 2 == 0)
-			z += t1;
+		t2 = temp;
+		if (temp % 2 == 0)
+			y += temp;
 	}
-	printf("%ld\n", z);
+	printf("%ld\n", y);
 
 	return (0);
 }
