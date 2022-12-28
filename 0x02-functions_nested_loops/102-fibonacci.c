@@ -11,7 +11,7 @@ int main(void)
 {
 	unsigned long int i, j = 0, t1 = 1, t2 = 2;
 
-	for (i = 0; i <= 50; i++)
+	for (i = 0; i < 50; i++)
 	{
 		printf("%ld, ", t1);
 		j = t1 + t2;
