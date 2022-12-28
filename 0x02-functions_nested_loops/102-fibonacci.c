@@ -13,10 +13,15 @@ int main(void)
 
 	for (i = 0; i < 50; i++)
 	{
-		printf("%ld, ", t1);
+		printf("%ld", t1);
 		j = t1 + t2;
 		t1 = t2;
 		t2 = j;
+		if (i != 49)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 
