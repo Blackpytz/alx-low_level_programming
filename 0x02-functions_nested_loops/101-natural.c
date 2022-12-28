@@ -9,17 +9,14 @@
 
 int main(void)
 {
-	int prod, x, y, z;
+	int prod = 0, y, z;
 
 	z = 1024;
-	for (y = 0; y <= z; y++)
+	for (y = 1; y < z; y++)
 	{
-		for (x = 0; x <= z; x++)
+		if (y % 3 == 0 || y % 5 == 0)
 		{
-			if (y % 3 == 0 && x % 5 == 0)
-			{
-				prod = y * x;
-			}
+			prod += y;
 		}
 	}
 	printf("%d\n", prod);
