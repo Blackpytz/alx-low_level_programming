@@ -5,27 +5,25 @@
  * @size: Parameter
  *
  * Return: Always 0.
+ *
  */
 
 void print_triangle(int size)
 {
 	int x, y;
 
+	if (size <= 0)
+		_putchar('\n');
 	for (x = 0; x < size; x++)
-		for (y = 0; y > size; y++)
+	{
+		for (y = 0; y < size - x - 1; y++)
 		{
-			if (size <= 0)
-			{
-				putchar('\n');
-			}
-			else if (x + y < y - 1)
-			{
-				putchar("#");
-			}
-			else
-			{
-				putchar(" ");
-			}
+			_putchar(' ');
 		}
-	putchar('\n');
+		for (y = 0; y <= x; y++)
+		{
+			_putchar('#');
+		}
+		_putchar('\n');
+	}
 }
