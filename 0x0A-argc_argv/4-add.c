@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	unsigned long int i, j, k, sum;
+	long int i, j, k, sum;
 
 	sum = 0;
 	for (i = 1; i < argc; i++)
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 		{
 			sum += atoi(argv[k]);
 		}
-		printf("%d\n", sum);
+		printf("%ld\n", sum);
 	}
 
 	return (0);
