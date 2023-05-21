@@ -11,7 +11,7 @@ int main(void)
 
 	while (alphabets <= 122)
 	{
-		if (alphbets != 'q' && alphabets != 'e')
+		if (alphabets != 'q' && alphabets != 'e')
 			putchar(alphabets);
 		alphabets++;
 	}
