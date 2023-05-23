@@ -11,9 +11,9 @@ void times_table(void)
 
 	for (height = 0; height <= 9; height++)
 	{
+		ttable = height * width;
 		for (; width <= 9; width++)
 		{
-			ttable = height * width;
 			_putchar('0' + ttable / 10);
 			if (ttable > 9)
 				_putchar('0' + ttable % 10);
