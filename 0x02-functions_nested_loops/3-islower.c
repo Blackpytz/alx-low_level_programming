@@ -9,12 +9,17 @@
  */
 int _islower(int c)
 {
-	char alphabets = 97;
+	int alphabets = 97;
 
 	while (alphabets <= 122)
 	{
-		if (c == alphabets)
-			return (1);
+		if (alphabets == c)
+		{
+			_putchar(48);
+		}
+		else
+			_putchar(47);
 	}
+	_putchar('\n');
 	return (0);
 }
