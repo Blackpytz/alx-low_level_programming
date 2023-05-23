@@ -7,15 +7,16 @@
  */
 void times_table(void)
 {
-	int height, width = 0, ttable;
+	int height, width, ttable;
 
 	for (height = 0; height <= 9; height++)
 	{
-		ttable = height * width;
-		for (; width <= 9; width++)
+		for (width = 0; width <= 9; width++)
 		{
+			ttable = height * width;
 			_putchar('0' + ttable / 10);
-			_putchar('0' + ttable % 10);
+			if (ttable > 9)
+				_putchar('0' + ttable % 10);
 			_putchar(',');
 			_putchar(' ');
 		}
