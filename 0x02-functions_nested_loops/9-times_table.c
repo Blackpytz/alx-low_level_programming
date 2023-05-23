@@ -13,7 +13,7 @@ void times_table(void)
 	{
 		for (width = 0; width <= 9; height++)
 		{
-			ttable = h * w;
+			ttable = height * width;
 			if (height == 0)
 			{
 				_putchar('0');
