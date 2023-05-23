@@ -9,17 +9,14 @@
  */
 int _islower(int c)
 {
-	int alphabets = 97;
+	int alphabets;
 
-	while (alphabets <= 122)
+	for (alphabets = 97; alphabets <= 122; alphabets++)
 	{
-		if (alphabets == c)
+		if (c == alphabets)
 		{
-			_putchar(48);
+			return (1);
 		}
-		else
-			_putchar(47);
 	}
-	_putchar('\n');
 	return (0);
 }
