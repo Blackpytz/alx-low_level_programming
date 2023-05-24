@@ -15,10 +15,12 @@ void times_table(void)
 		{
 			if (width == 0)
 			{
-				_putchar('0');
+				_putchar(48);
 				continue;
 			}
 			ttable = height * width;
+			_putchar(',');
+			_putchar(' ');
 			if (ttable <= 9)
 			{
 				_putchar(' ');
@@ -29,8 +31,6 @@ void times_table(void)
 				_putchar('0' + ttable / 10);
 				_putchar('0' + ttable % 10);
 			}
-			_putchar(',');
-			_putchar(' ');
 		}
 			_putchar('\n');
 	}
