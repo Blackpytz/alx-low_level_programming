@@ -29,6 +29,7 @@ void times_table(void)
 				if (width != 9)
 					_putchar(',');
 				_putchar(' ');
+			}
 		}
 			_putchar('\n');
 	}
