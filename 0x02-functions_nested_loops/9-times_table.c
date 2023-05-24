@@ -28,7 +28,7 @@ void times_table(void)
 				_putchar('0' + ttable % 10);
 				if (width != 9)
 					_putchar(',');
-					_putchar(' ');
+				_putchar(' ');
 		}
 			_putchar('\n');
 	}
