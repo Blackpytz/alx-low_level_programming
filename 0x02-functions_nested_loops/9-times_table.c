@@ -14,19 +14,19 @@ void times_table(void)
 		for (width = 0; width <= 9; width++)
 		{
 			ttable = height * width;
-			if (ttable <= 9)
-			{
-				_putchar('0' + ttable / 10);
-				if (width != 9)
-					_putchar(',');
-				_putchar(' ');
-			}
-			else
+			if (ttable > 9)
 			{
 				_putchar('0' + ttable / 10);
 				_putchar('0' + ttable % 10);
 				if (width != 9)
 					_putchar(',');
+			}
+			else
+			{
+				_putchar('0' + ttable / 10);
+				if (width != 9)
+					_putchar(',')
+				_putchar(' ');
 			}
 			_putchar(' ');
 		}
