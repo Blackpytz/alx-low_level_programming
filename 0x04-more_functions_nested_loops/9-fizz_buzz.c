@@ -17,11 +17,11 @@ int main(void)
 	for (num = 1; num <= 99; num++)
 	{
 		if (num % 5 == 0 && num % 3 == 0)
-			printf("%c ", threefive);
+			printf("%s ", threefive);
 		else if (num % 5 == 0)
-			printf("%c ", five);
+			printf("%s ", five);
 		else if (num % 3 == 0)
-			printf("%c ", three);
+			printf("%s ", three);
 		else
 			printf("%d ", num);
 	}
