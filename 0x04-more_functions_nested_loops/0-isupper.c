@@ -11,9 +11,9 @@ int _isupper(int c)
 {
 	int alphabets = 65;
 
-	while (alphabets >= 90)
+	while (alphabets <= 90)
 	{
-		if (alphabets == c)
+		if (c == alphabets)
 			return (1);
 		alphabets++;
 	}
