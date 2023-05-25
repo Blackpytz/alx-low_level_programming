@@ -15,6 +15,7 @@ int _isupper(int c)
 	{
 		if (alphabets == c)
 			return (1);
+		alphabets++;
 	}
 	return (0);
 }
