@@ -16,11 +16,11 @@ int main(void)
 
 	for (num = 1; num <= 99; num++)
 	{
-		if (num % 5 = 0 && num % 3 = 0)
+		if (num % 5 == 0 && num % 3 == 0)
 			printf("%c ", threefive);
-		else if (num % 5 = 0)
+		else if (num % 5 == 0)
 				printf("%c ", five);
-		else if (num % 3 = 0)
+		else if (num % 3 == 0)
 				printf("%c ", three);
 		else
 			printf("%d ", num);
