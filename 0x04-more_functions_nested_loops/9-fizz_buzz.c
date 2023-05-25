@@ -19,9 +19,9 @@ int main(void)
 		if (num % 5 == 0 && num % 3 == 0)
 			printf("%c ", threefive);
 		else if (num % 5 == 0)
-				printf("%c ", five);
+			printf("%c ", five);
 		else if (num % 3 == 0)
-				printf("%c ", three);
+			printf("%c ", three);
 		else
 			printf("%d ", num);
 	}
