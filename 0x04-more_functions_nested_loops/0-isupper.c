@@ -11,7 +11,7 @@ int _isupper(int c)
 {
 	int alphabets = 65;
 
-	for (;alphabets <= 90; alphabets++)
+	for (; alphabets <= 90; alphabets++)
 	{
 		if (c == alphabets)
 			return (1);
