@@ -25,7 +25,7 @@ int main(void)
 		else
 			printf("%d ", num);
 	}
-	printf("%c\n", five);
+	printf("%s\n", five);
 
 	return (0);
 }
