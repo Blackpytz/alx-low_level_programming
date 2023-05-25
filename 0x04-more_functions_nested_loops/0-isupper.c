@@ -13,7 +13,7 @@ int _isupper(int c)
 
 	while (alphabets >= 90)
 	{
-		if (c == alphabets)
+		if (alphabets == c)
 			return (1);
 	}
 	return (0);
