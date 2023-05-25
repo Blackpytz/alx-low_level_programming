@@ -15,7 +15,9 @@ void print_triangle(int size)
 		{
 			for (column = 1; column <= size; column++)
 			{
-				for (; column < row; column--)
+				if (column <= size - row)
+					_putchar(' ');
+				else
 					_putchar('#');
 			}
 			_putchar('\n');
