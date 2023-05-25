@@ -11,11 +11,10 @@ int _isupper(int c)
 {
 	int alphabets = 65;
 
-	while (alphabets <= 90)
+	for (;alphabets <= 90; alphabets++)
 	{
 		if (c == alphabets)
 			return (1);
-		alphabets++;
 	}
 	return (0);
 }
