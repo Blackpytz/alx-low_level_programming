@@ -18,7 +18,7 @@ char *_strcpy(char *dest, char *src)
 	{
 		dest[len2 + len1] = *src;
 	}
-	dest[len1 + len2 + 1] = '\0';
+	dest[len2 + len1 + 1] = '\0';
 
 	return (dest);
 }
