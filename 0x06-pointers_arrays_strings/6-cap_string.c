@@ -14,7 +14,7 @@ char *cap_string(char *c)
 		if (c[i] >= 'a' && c[i] <= 'z')
 		{
 			if (capitalize)
-				a[i] -= 32;
+				c[i] -= 32;
 			capitalize = 0;
 		}
 		else if (c[i] == ' ' || c[i] == '\t' || c[i] == '\n' ||
