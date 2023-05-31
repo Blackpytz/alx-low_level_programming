@@ -11,12 +11,9 @@ char *cap_string(char *c)
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		if (c[i] >= 'a' && c[i] <= 'z')
-		{
-			if (capitalize)
-				c[i] -= 32;
-			capitalize = 0;
-		}
+		if (capitalize && (c[i] >= 'a' && c[i] <= 'z'))
+			c[i] -= 32;
+		capitalize = 0;
 		else if (c[i] == ' ' || c[i] == '\t' || c[i] == '\n' ||
 			c[i] == ',' || c[i] == ';' || c[i] == '.' ||
 			c[i] == '!' || c[i] == '?' || c[i] == '"' ||
