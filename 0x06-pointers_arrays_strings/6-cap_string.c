@@ -7,17 +7,23 @@
 */
 char *cap_string(char *c)
 {
-	int i;
+	int i, capitalize = 1;
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		if ((c[i] == ' ' || c[i] == '\t' || c[i] == '\n' ||
+		if (c[i] >= 'a' && c[i] <= 'z')
+		{
+			if (capitalize)
+				a -= 32;
+			capitalize = 0;
+		}
+		else if (c[i] == ' ' || c[i] == '\t' || c[i] == '\n' ||
 			c[i] == ',' || c[i] == ';' || c[i] == '.' ||
 			c[i] == '!' || c[i] == '?' || c[i] == '"' ||
 			c[i] == '(' || c[i] == ')' || c[i] == '}' ||
-			c[i] == '}') && (c[i + 1] >= 'a' && c[i + 1] <= 'z'))
+			c[i] == '}')
 		{
-			c[i + 1] = c[i + 1] - 32;
+			capitalize = 1;
 		}
 	}
 	return (c);
