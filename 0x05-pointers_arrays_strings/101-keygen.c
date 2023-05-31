@@ -8,15 +8,16 @@
 */
 int main(void)
 {
-	int min = 1000;
-	int max = 9999;
-	int randNum;
+	int sum;
+	char c;
 
-	srand(time(0));
-
-	randNum = (rand() % (max - min + 1)) + min;
-
-	printf("%d", randNum);
-
+	srand(time(NULL));
+	while (sum <= 2645)
+	{
+		c = rand() % 128;
+		sum += c;
+		putchar(c);
+	}
+	putchar(2772 - sum);
 	return (0);
 }
