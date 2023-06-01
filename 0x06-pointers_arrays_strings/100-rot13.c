@@ -16,9 +16,9 @@ char *rot13(char *str)
 		for (j = 0; j < 26; j++)
 		{
 			if (str[i] == s1[j])
-				str[i] == s2[j];
+				str[i] = s2[j];
 			else if (str[i] == s2[j])
-				str[i] == s1[j];
+				str[i] = s1[j];
 		}
 	}
 
