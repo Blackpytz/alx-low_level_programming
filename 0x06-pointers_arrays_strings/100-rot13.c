@@ -16,7 +16,7 @@ char *rot13(char *str)
 		for (j = 0; j < 52; j++)
 		{
 			if (*(str + count) == alphabet[j])
-				*(s + count) = rot13[j];
+				*(str + count) = rot13[j];
 		}
 	}
 
