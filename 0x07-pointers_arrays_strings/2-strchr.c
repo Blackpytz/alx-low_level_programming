@@ -9,12 +9,16 @@
 */
 char *_strchr(char *s, char c)
 {
+	char *str;
 	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (*(s + i) == c)
-			return (s - i);
+		{
+			str[i] = s[i];
+			return (s);
+		}
 	}
 	return (NULL);
 }
