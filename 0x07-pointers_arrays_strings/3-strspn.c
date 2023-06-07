@@ -21,8 +21,8 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				num++;
 				match = 1;
+				break;
 			}
-			break;
 		}
 		if (match == 0)
 			break;
