@@ -23,16 +23,31 @@ int main(int argc, char *argv[])
 		printf("0\n");
 	else
 	{
-		while (cents / 25)
+		while (cents >= 25)
+		{
 			sum++;
-		while (cents / 10)
+			cents -= 25;
+		}
+		while (cents >= 10)
+		{
 			sum++;
-		while (cents / 5)
+			cents -= 10;
+		}
+		while (cents >= 5)
+		{
 			sum++;
-		while (cents / 2)
+			cents -= 5;
+		}
+		while (cents >= 2)
+		{
 			sum++;
-		while (cents / 1)
+			cents -= 2;
+		}
+		while (cents >= 1)
+		{
 			sum++;
+			cents -= 1;
+		}
 
 		printf("%d\n", sum);
 	}
