@@ -9,9 +9,11 @@
 */
 int main(int argc, char *argv[])
 {
+	int num1 = atoi(argv[1]), num2 = atoi(argv[2]), result = num1 * num2;
+
 	if (argc > 1)
 	{
-		printf("%d\n", atoi(argv[1] * argv[2]));
+		printf("%d\n", result);
 	}
 	else
 	{
