@@ -11,7 +11,7 @@
 */
 int main(int argc, char *argv[])
 {
-	int cents = 0;
+	int cents = 0, sum = 0;
 
 	if (argc != 2)
 	{
@@ -21,6 +21,21 @@ int main(int argc, char *argv[])
 	cents = atoi(argv[1]);
 	if (cents < 1)
 		printf("0\n");
+	else
+	{
+		while (cents / 25)
+			sum++;
+		while (cents / 10)
+			sum++;
+		while (cents / 5)
+			sum++;
+		while (cents / 2)
+			sum++;
+		while (cents / 1)
+			sum++;
+
+		printf("%d\n", sum);
+	}
 
 	return (0);
 }
