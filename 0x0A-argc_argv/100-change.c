@@ -22,7 +22,10 @@ int main(int argc, char *argv[])
 	else
 	{
 		while (cents >= 25)
-			sum++, cents -= 25;
+		{
+			sum++;
+			cents -= 25;
+		}
 		while (cents >= 10)
 		{
 			sum++;
@@ -39,10 +42,7 @@ int main(int argc, char *argv[])
 			cents -= 2;
 		}
 		while (cents >= 1)
-		{
-			sum++;
-			cents -= 1;
-		}
+			sum++, cents -= 1;
 
 		printf("%d\n", sum);
 	}
