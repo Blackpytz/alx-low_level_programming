@@ -10,9 +10,9 @@
 */
 int main(int argc, char *argv[])
 {
-	int i, digit, sum;
+	int i, digit, sum = 0;
 
-	for (i = 0; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 		for (digit = 0; argv[i][digit] != '\0'; digit++)
 		{
