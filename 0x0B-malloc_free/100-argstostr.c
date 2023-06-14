@@ -32,10 +32,10 @@ char *argstostr(int ac, char **av)
 			ptr[index] = av[i][j];
 			index++;
 		}
-		str[index] = '\n';
+		ptr[index] = '\n';
 		index++;
 	}
-	str[index] = '\0';
+	ptr[index] = '\0';
 
 	return (str);
 }
