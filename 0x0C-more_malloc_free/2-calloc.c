@@ -24,7 +24,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	byte_ptr = ptr;
 
 	for (i = 0; i < (nmemb * size); i++)
-		byte_ptr[i] = '\0';
+		byte_ptr[i] = 0;
 
 	return (ptr);
 }
