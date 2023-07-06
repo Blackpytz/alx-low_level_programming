@@ -12,7 +12,7 @@ int sqrtHelper(int n, int guess)
 {
 	if (guess * guess == n)
 		return (guess);
-	if (guess * gurss > n)
+	if (guess * guess > n)
 		return (-1);
 	return (sqrtHelper(n, guess + 1));
 }
