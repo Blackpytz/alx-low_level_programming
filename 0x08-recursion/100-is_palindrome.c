@@ -11,7 +11,7 @@
 */
 int is_palindrome_helper(char *s, int start, int end)
 {
-	if (start == end)
+	if (start >= end)
 		return (1);
 	if (s[start] != s[end])
 		return (0);
