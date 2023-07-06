@@ -28,5 +28,5 @@ int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);
-	return (is_prime_number(n, 2));
+	return (is_prime_number_helper(n, 2));
 }
