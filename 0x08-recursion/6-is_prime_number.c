@@ -12,9 +12,9 @@ int is_prime_number_helper(int n, int divisor)
 {
 	if (n % divisor != 0 && divisor != n)
 		return (1);
-	if (n % divisor= 0)
+	if (n % divisor == 0)
 		return (0);
-	return (is_prime_number_helper(n, divisor + 1)
+	return (is_prime_number_helper(n, divisor + 1));
 }
 
 /**
