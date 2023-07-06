@@ -18,7 +18,8 @@ int is_prime_number_helper(int n, int divisor)
 }
 
 /**
-*is_prime_number - function that returns 1 if the input integer is a prime number
+*is_prime_number - function that returns 1 if the
+*input integer is a prime number
 *@n: parameter
 *
 *Return: 1 if the input integer is a prime number otherwise return 0.
