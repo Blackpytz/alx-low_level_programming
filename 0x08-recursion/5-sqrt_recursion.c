@@ -14,7 +14,7 @@ int sqrtHelper(int n, int guess)
 		return (guess);
 	if (guess * gurss > n)
 		return (-1);
-	return (sqrtHelper(n, guess + 1);
+	return (sqrtHelper(n, guess + 1));
 }
 
 /**
@@ -28,5 +28,5 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (sqrtHelper(n, 0);
+	return (sqrtHelper(n, 0));
 }
