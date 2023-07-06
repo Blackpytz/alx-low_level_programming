@@ -2,7 +2,8 @@
 #include <string.h>
 
 /**
-*is_palindrome_helper - function that returns 1 if a string is a palindrome and 0 if not
+*is_palindrome_helper - function that returns 1 if a string is a
+*palindrome and 0 if not
 *@s: string to check if it's palindrome
 *@start: start of string
 *@end: end of string
