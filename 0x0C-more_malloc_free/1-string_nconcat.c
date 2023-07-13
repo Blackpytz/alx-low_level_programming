@@ -12,13 +12,13 @@
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	char *ptr;
+	unsigned int total_len, i, j;
+
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
-	unsigned int total_len, i, j;
-	char *ptr;
 
 	total_len = strlen(s1) + strlen(s2) + 1;
 
