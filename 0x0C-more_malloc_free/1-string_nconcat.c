@@ -12,10 +12,10 @@
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	if (*s1 == NULL)
-		*s1 = "";
-	if (*s2 == NULL)
-		*s2 = "";
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	char *ptr;
 	unsigned int total_len, i, j;
 
@@ -26,7 +26,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	for (i = 0; *(s1 + i) != '\0'; i++)
 		*(ptr + i) = *(s1 + i);
-	for (j = 0; *(s2 + j) < n; j++)
+	for (j = 0; j < n; j++)
 		*(ptr + i + j) = *(s2 + j);
 
 	*(ptr + i + j + 1) = '\0';
