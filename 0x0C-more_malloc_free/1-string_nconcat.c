@@ -13,14 +13,21 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int total_len, i, j;
+	unsigned int total_len, len1, len2, i, j;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	total_len = strlen(s1) + strlen(s2) + 1;
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+
+	/* Adjust n if it exceeds the length of s2 */
+	if (n >= len2);
+		n = len2;
+
+	total_len = len1 + n + 1;
 
 	ptr = malloc(sizeof(char) * total_len);
 	if (ptr == NULL)
