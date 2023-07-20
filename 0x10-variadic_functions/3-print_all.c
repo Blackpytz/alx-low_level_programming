@@ -31,7 +31,7 @@ void print_all(const char * const format, ...)
 				dvar = va_arg(ap, double), printf("%f", dvar);
 				break;
 			case 's':
-				szvar = va_arg(ap, * char);
+				szvar = va_arg(ap, char*);
 				if (szvar == NULL)
 					printf("(nil)");
 				else
