@@ -10,37 +10,42 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int i, nvar, len, cvar;
-	char *szvar;
+	int i, nvar, cvar;
+	char *szvar, *separator;
 	double dvar;
 
-	len = strlen(format);
 	va_start(ap, format);
 	i = 0;
-	while (*(format + i) != '\0')
+	separator = "";
+	if (format)
 	{
-		switch (*format)
+		while (*(format + i))
 		{
-			case 'c':
-				cvar = va_arg(ap, int), printf("%c", cvar);
-				break;
-			case 'i':
-				nvar = va_arg(ap, int), printf("%d", nvar);
-				break;
-			case 'f':
-				dvar = va_arg(ap, double), printf("%f", dvar);
-				break;
-			case 's':
-				szvar = va_arg(ap, char*);
-				if (szvar == NULL)
-					printf("(nil)");
-				else
-					printf("%s", szvar);
-				break;
+			switch (*(format + i))
+			{
+				case 'c':
+					cvar = va_arg(ap, int), printf("%s%c", separator, cvar);
+					break;
+				case 'i':
+					nvar = va_arg(ap, int), printf("%s%d", separator, nvar);
+					break;
+				case 'f':
+					dvar = va_arg(ap, double), printf("%s%f", separator, dvar);
+					break;
+				case 's':
+					szvar = va_arg(ap, char *);
+					if (szvar == NULL)
+						printf("(nil)");
+					else
+						printf("%s%s", separator, szvar);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			separator = ", ";
+			i++;
 		}
-		if (i != len - 1)
-			printf(", ");
-		i++;
 	}
 	va_end(ap);
 	putchar('\n');
