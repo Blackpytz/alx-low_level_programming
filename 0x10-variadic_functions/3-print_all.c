@@ -19,7 +19,7 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (*(format + i))
 	{
-		switch(format)
+		switch (format)
 		{
 			case 'c':
 				cvar = va_arg(ap, int) printf("%c", cvar);
