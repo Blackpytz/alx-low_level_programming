@@ -19,16 +19,16 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (*(format + i))
 	{
-		switch (format)
+		switch (*format)
 		{
 			case 'c':
-				cvar = va_arg(ap, int) printf("%c", cvar);
+				cvar = va_arg(ap, int), printf("%c", cvar);
 				break;
 			case 'i':
-				nvar = va_arg(ap, int) printf("%d", nvar);
+				nvar = va_arg(ap, int), printf("%d", nvar);
 				break;
 			case 'f':
-				dvar = va_arg(ap, double) printf("%f", dvar);
+				dvar = va_arg(ap, double), printf("%f", dvar);
 				break;
 			case 's':
 				szvar = va_arg(ap, *char)
