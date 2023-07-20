@@ -10,13 +10,13 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int i, nvar, cvar;
+	int i;
 	char *szvar, *separator;
-	double dvar;
 
 	va_start(ap, format);
 	i = 0;
 	separator = "";
+
 	if (format)
 	{
 		while (*(format + i))
@@ -24,20 +24,19 @@ void print_all(const char * const format, ...)
 			switch (*(format + i))
 			{
 				case 'c':
-					cvar = va_arg(ap, int), printf("%s%c", separator, cvar);
+					printf("%s%c", separator, va_arg(ap, int));
 					break;
 				case 'i':
-					nvar = va_arg(ap, int), printf("%s%d", separator, nvar);
+					printf("%s%d", separator, va_arg(ap, int));
 					break;
 				case 'f':
-					dvar = va_arg(ap, double), printf("%s%f", separator, dvar);
+					printf("%s%f", separator, va_arg(ap, double));
 					break;
 				case 's':
 					szvar = va_arg(ap, char *);
 					if (szvar == NULL)
-						printf("(nil)");
-					else
-						printf("%s%s", separator, szvar);
+						szvar = "(nil)";
+					printf("%s%s", separator, szvar);
 					break;
 				default:
 					i++;
