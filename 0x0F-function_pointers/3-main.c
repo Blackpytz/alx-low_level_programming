@@ -5,7 +5,7 @@
 * @argc: argument count
 * @argv: argumetn vector
 *
-* Return: on sucess 1.
+* Return: on sucess 0.
 */
 int main(int __attribute__((__unused__))argc, char argv[])
 {
@@ -17,12 +17,11 @@ int main(int __attribute__((__unused__))argc, char argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	num1 = atoi(argv[2]);
-	num2 = atoi(argv[4]);
-	operator = argv[3];
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	operator = argv[2];
 
-	if (operator != '+' || operator != '-' || operator != '*' ||
-		operator != '/' || operator != '%')
+	if (get_op_func(op) == NULL || operator[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
@@ -34,7 +33,7 @@ int main(int __attribute__((__unused__))argc, char argv[])
 		exit(100);
 	}
 
-	printf("%d\n", get_op_function(operator), num1, num2);
+	printf("%d\n", get_op_func(operator)(num1, num2));
 
-	return (1);
+	return (0);
 }
