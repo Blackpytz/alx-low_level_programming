@@ -1,13 +1,13 @@
 #include "lists.h"
 
 /**
-* end_node_end - function that adds a new node at he end of a list_t list
+* add_node_end - function that adds a new node at he end of a list_t list
 * @head: pointer to a pointer to a singly linked list
 * @str: pointer to a string to be duplicated
 *
 * Return: the address of the new element, or NULL if it failed.
 */
-list_t *end_node_end(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new;
 
