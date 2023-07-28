@@ -11,7 +11,7 @@ size_t print_list(const list_t *h)
 	unsigned int index = 0;
 
 	if (h->str == NULL)
-		str = "[0] (nil)";
+		h->str = "[0] (nil)";
 
 	while (h)
 	{
