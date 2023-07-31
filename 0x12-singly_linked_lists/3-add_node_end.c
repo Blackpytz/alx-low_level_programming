@@ -36,9 +36,9 @@ list_t *add_node_end(list_t **head, const char *str)
 		{
 			current = new->next;
 		}
-		current = new;
+		current->next = new;
 	}
-	printf("[%i] %s\n", head->len, head->str);
+	printf("[%i] %s\n", current->len, current->str);
 
 	return (new);
 }
