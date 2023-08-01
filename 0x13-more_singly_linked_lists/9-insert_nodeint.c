@@ -1,7 +1,8 @@
 #include "list.h"
 
 /**
-* insert_nodeint_at_index - function that inserts a new node at a given position
+* insert_nodeint_at_index - function that inserts a new node
+* at a given position
 * @head: singly linked list
 * @idx: index of the list where the new node should be added
 * @n: value to be inserted in the singly linked list
@@ -23,7 +24,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 
 	new->n = n;
-	for (i = 0; i < idx && current-> != NULL; i++, current = current->next)
+	for (i = 0; i < idx && current->next != NULL; i++, current = current->next)
 	{}
 
 	new->next = current->next;
