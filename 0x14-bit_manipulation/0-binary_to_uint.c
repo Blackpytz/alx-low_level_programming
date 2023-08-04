@@ -26,7 +26,7 @@ unsigned int binary_to_uint(const char *b)
 		if (*end != '0' || *end != '1')
 			return (0);
 
-		if (*end == 1)
+		if (*end == '1')
 			dnum += place_value;
 
 		place_value *= 2;
