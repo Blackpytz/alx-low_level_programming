@@ -9,7 +9,7 @@
 */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int dnum, place_value = 1;
+	unsigned int dnum = 0, place_value = 1;
 	const char *end;
 
 	if (!b)
