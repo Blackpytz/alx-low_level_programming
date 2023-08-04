@@ -23,6 +23,8 @@ unsigned int binary_to_uint(const char *b)
 
 	while (end > b)
 	{
+		end--;
+
 		if (*end != '0' && *end != '1')
 			return (0);
 
@@ -31,7 +33,6 @@ unsigned int binary_to_uint(const char *b)
 
 		place_value *= 2;
 
-		end--;
 	}
 	return (dnum);
 }
