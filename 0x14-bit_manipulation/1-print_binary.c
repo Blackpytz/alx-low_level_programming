@@ -17,7 +17,8 @@ void print_binary(unsigned long int n)
 	}
 
 	/* recursive call: shift the bits to the right by 1 */
-	print_binary(n >> 1);
+	if (n >> 1 != 0)
+		print_binary(n >> 1);
 
 	/* print the last bit of the number */
 	_putchar((n & 1) ? '1' : '0');
