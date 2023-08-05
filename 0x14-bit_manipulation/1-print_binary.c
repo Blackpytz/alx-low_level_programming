@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 {
 	/* base case: number is 0 */
 	if (n == 0)
-		return;
+		return (0);
 
 	/* recursive call: shift the bits to the right by 1 */
 	print_binary(n >> 1);
