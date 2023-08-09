@@ -39,5 +39,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	count = write(STDOUT_FILENO, buffer, read_file);
 	free(buffer);
 	close(fd);
-	return (0);
+	return (count);
 }
