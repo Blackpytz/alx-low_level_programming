@@ -25,7 +25,7 @@ int create_file(const char *filename, char *text_content)
 	if (buffer == NULL)
 		return (-1);
 
-	fd = open(filename, O_CREAT, mode);
+	fd = open(filename, O_CREAT | O_WRONLY, mode);
 	if (fd == -1)
 	{
 		free(buffer);
