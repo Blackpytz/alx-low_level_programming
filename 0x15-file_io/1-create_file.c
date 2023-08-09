@@ -9,8 +9,7 @@
 */
 int create_file(const char *filename, char *text_content)
 {
-	char *buffer;
-	int fd, len = 0, i = 0;
+	int fd, len = 0;
 	mode_t mode = S_IRUSR | S_IWUSR;
 
 	if (!filename)
@@ -19,26 +18,17 @@ int create_file(const char *filename, char *text_content)
 	if (text_content == NULL)
 		text_content = "";
 
-	while (*text_content++)
+	while (text_content[len] != NULL)
 		len++;
-	buffer = malloc(sizeof(char) * len + 1);
-	if (buffer == NULL)
-		return (-1);
 
 	fd = open(filename, O_CREAT | O_WRONLY, mode);
 	if (fd == -1)
 	{
-		free(buffer);
 		return (-1);
 	}
-	while (text_content[i])
-	{
-		buffer[i] = text_content[i];
-		i++;
-	}
-	write(fd, buffer, len);
 
-	free(buffer);
+	write(fd, text_content, len);
+
 	close(fd);
 	return (1);
 }
