@@ -36,7 +36,7 @@ int create_file(const char *filename, char *text_content)
 		buffer[i] = text_content[i];
 		i++;
 	}
-	write(STDOUT_FILENO, buffer, len);
+	write(fd, buffer, len);
 
 	free(buffer);
 	close(fd);
