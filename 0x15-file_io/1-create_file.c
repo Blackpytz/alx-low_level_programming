@@ -31,7 +31,7 @@ int create_file(const char *filename, char *text_content)
 		free(buffer);
 		return (-1);
 	}
-	while (text_content[i] != NULL)
+	while (text_content[i])
 	{
 		buffer[i] = text_content[i];
 		i++;
