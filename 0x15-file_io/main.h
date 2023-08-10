@@ -8,7 +8,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
-#define BYTES 1024
+#define BUFSIZE 1024
 
 ssize_t read_textfile(const char *filename, size_t letters);
 
