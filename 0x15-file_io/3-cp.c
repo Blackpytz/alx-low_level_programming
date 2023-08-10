@@ -25,6 +25,11 @@ int main(int ac, char *av[])
 		close_file(fd_in);
 		exit(99);
 	}
+	if (chmod(av[2], 0664) < 0)
+	{
+		perror("Erro changing permissions");
+		eixt(1);
+	}
 	while ((bytes_read = read(fd_in, buffer, BUFSIZE)) > 0)
 	{
 		bytes_write = write(fd_out, buffer, bytes_read);
