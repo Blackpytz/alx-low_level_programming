@@ -28,7 +28,7 @@ int main(int ac, char *av[])
 	if (chmod(av[2], 0664) < 0)
 	{
 		perror("Erro changing permissions");
-		eixt(1);
+		exit(1);
 	}
 	while ((bytes_read = read(fd_in, buffer, BUFSIZE)) > 0)
 	{
