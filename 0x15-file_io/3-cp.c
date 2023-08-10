@@ -16,7 +16,7 @@ int main(int ac, char *av[])
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to");
+		dprintf(2, "Usage: cp file_from file_to", av[0]);
 	exit(97);
 	}
 	fd1 = open(av[1], O_RDONLY, 0);
@@ -35,6 +35,9 @@ int main(int ac, char *av[])
 	while ((n = read(fd1, buf, BUFSIZE)) > 0)
 		write(fd2, buf, n);
 	if ((close(fd1) == -1) || (close(fd2) == -1))
+	{
 		dprintf(2, "Error: Can't close fd %d\n", fd2);
+		exit(100);
+	}
 	return (0);
 }
