@@ -19,12 +19,14 @@ int main(int ac, char *av[])
 		dprinf(2, "Usage: cp file_from file_to");
 		exit(97);
 	}
-	if ((fd1 = open(av[1], O_RDONLY, 0)) == -1)
+	fd1 = open(av[1], O_RDONLY, 0);
+	if (fd1 == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	if ((fd2 = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, mode)) == -1)
+	fd2 = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, mode)
+	if (fd2 == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", av[2]);
 		exit(99);
