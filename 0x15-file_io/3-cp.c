@@ -12,7 +12,6 @@ int main(int ac, char *av[])
 {
 	int fd1, fd2, n;
 	char buf[BUFSIZE];
-	mode_t mode = 666;
 
 	if (ac != 3)
 	{
@@ -25,7 +24,7 @@ int main(int ac, char *av[])
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	fd2 = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, mode);
+	fd2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", av[2]);
