@@ -1,5 +1,7 @@
 #include "main.h"
 
+void close_file(int fd);
+
 /**
 * main - program that copies the content of a file to
 * another file
@@ -10,7 +12,7 @@
 */
 int main(int ac, char *av[])
 {
-	int fd1, fd2, n;
+	int fd1, fd2, bytes_read;
 	char buf[BUFSIZE];
 
 	if (ac != 3)
@@ -24,17 +26,39 @@ int main(int ac, char *av[])
 	fd2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
+		dprintf(2, "Error: Can't write to %s\n", av[2]), close(fd1);
+		exit(99);
 	}
 
-	while ((n = read(fd1, buf, BUFSIZE)) > 0)
+	while ((bytes_read = read(fd1, buf, BUFSIZE)) > 0)
 	{
-		if (write(fd2, buf, n) != n)
-			dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
+		if (write(fd2, buf, bytes_read) != bytes_read)
+		{
+			dprintf(2, "Error: Can't write to %s\n", av[2]), close_file(fd1);
+			close_file(fd2), exit(99);
+		}
 	}
-	if (close(fd1) == -1)
-		dprintf(2, "Error: Can't close fd %d\n", fd1), exit(100);
-	if (close(fd2) == -1)
-		dprintf(2, "Error: Can't close fd %d\n", fd2), exit(100);
+	if (bytes_read == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]), close_file(fd1);
+		close_file(fd2), exit(98);
+	}
+	close_file(fd1);
+	close_file(fd2);
 	return (0);
+}
+
+/**
+* close_file - function that close a file
+* @fd: file descriptor
+*
+* Return: Void.
+*/
+void close_file(int fd)
+{
+	if (close(fd) == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
 }
