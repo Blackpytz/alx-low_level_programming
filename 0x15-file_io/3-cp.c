@@ -12,7 +12,7 @@ int main(int ac, char *av[])
 {
 	int fd1, fd2, n;
 	char buf[BUFSIZE];
-	mode_t mode = 0664;
+	mode_t mode = 666;
 
 	if (ac != 3)
 	{
