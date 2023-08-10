@@ -32,7 +32,7 @@ int main(int ac, char *av[])
 		exit(99);
 	}
 
-	while ((n = read(fd1, buf, BRFSIZE)) > 0)
+	while ((n = read(fd1, buf, BUFSIZE)) > 0)
 		write(fd2, buf, n);
 	if ((close(fd1) == -1) || (close(fd2) == -1))
 		dprintf(2, "Error: Can't close fd %d\n", fd2);
