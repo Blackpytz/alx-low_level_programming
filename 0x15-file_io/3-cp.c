@@ -27,7 +27,7 @@ int main(int ac, char *av[])
 	}
 	while ((bytes_read = read(fd_in, buffer, BUFSIZE)) > 0)
 	{
-		bytes_write = write(fd_out, buffe, bytes_read);
+		bytes_write = write(fd_out, buffer, bytes_read);
 		if (bytes_write != bytes_read)
 		{
 			dprintf(2, "Error: Can't write to %s\n", av[2]);
@@ -46,7 +46,7 @@ int main(int ac, char *av[])
 		}
 	}
 	close_file(fd_in);
-	cose_file(fd_out);
+	close_file(fd_out);
 	return (0);
 }
 
