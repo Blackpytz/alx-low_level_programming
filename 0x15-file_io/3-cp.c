@@ -31,6 +31,7 @@ int main(int ac, char *av[])
 	{
 		if (write(fd2, buf, n) != n)
 			dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
+	}
 	if (close(fd1) == -1)
 		dprintf(2, "Error: Can't close fd %d\n", fd1), exit(100);
 	if (close(fd2) == -1)
