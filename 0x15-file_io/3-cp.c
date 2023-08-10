@@ -40,7 +40,7 @@ int main(int ac, char *av[])
 	}
 	if (bytes_read == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]), close_file(fd1);
+		dprintf(2, "Error: Can't read from file %s\n", av[1]), close_file(fd1);
 		close_file(fd2), exit(98);
 	}
 	close_file(fd1);
