@@ -19,11 +19,14 @@ void times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
+				if (multiplication <= 9)
+				{
+					_putchar(' ');
+				}
 			}
 
 			if (multiplication <= 9)
 			{
-				_putchar(' ');
 				_putchar('0' + multiplication % 10);
 			}
 
