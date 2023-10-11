@@ -15,6 +15,12 @@ void times_table(void)
 		{
 			multiplication = num1 * num2;
 
+			if (num2 != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+
 			if (multiplication <= 9)
 			{
 				_putchar(' ');
@@ -26,9 +32,6 @@ void times_table(void)
 				_putchar('0' + multiplication / 10);
 				_putchar('0' + multiplication % 10);
 			}
-			if (num2 != 9)
-				_putchar(',');
-			_putchar(' ');
 		}
 		_putchar('\n');
 	}
