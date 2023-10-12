@@ -26,6 +26,6 @@ int main(void)
 		else
 			printf("%d ", i);
 	}
-	printf("%s\n", cWord3);
+	printf("%s\n", cWord2);
 	return (0);
 }
