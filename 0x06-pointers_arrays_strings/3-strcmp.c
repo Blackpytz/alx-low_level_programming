@@ -17,21 +17,13 @@ int _strcmp(char *s1, char *s2)
 	{
 		for (; s2[j]; j++)
 		{
-			if (*s1 == *s2)
-			{
-				return (n);
-			}
-			else if (*s1 < *s2)
-			{
-				n = *s1 - *s2;
-				return (n);
-			}
-			else
+			if (*s1 != *s2)
 			{
 				n = *s1 - *s2;
 				return (n);
 			}
 		}
 	}
+
 	return (0);
 }
