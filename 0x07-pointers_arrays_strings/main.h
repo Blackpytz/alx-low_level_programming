@@ -24,4 +24,4 @@ void print_diagsums(int *a, int size);
 
 void print_diagsums(int *a, int size);
 
-#endif /* MAIN_H *?
+#endif /* MAIN_H */
