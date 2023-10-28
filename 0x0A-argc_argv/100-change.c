@@ -11,7 +11,8 @@
 */
 int main(int argc, char *argv[])
 {
-	int cents, coins = 0;
+	int i, cents, result = 0;
+	char coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -27,24 +28,16 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	while (cents >= 25)
+	for (i = 0; i < 5 && cents >= 0; i++)
 	{
-		coins++;
-		cents -= 25;
+		while (cents >= coins[i])
+		{
+			result++;
+			cents -= coins[i];
+		}
 	}
-	while (cents >= 10)
-	{
-		coins++;
-		cents -= 10;
-	}
-	while (cents >= 5)
-	{
-		coins++;
-		cents -= 5;
-	}
-	coins = cents;
 
-	printf("%d\n", coins);
+	printf("%d\n", result);
 
 	return (0);
 }
