@@ -9,17 +9,19 @@
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *cal;
-	unsigned int i;
+	char *cal;
+	unsigned int i, total_size;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	cal = malloc(nmemb * size);
+	total_size = nmemb * size;
+
+	cal = malloc(total_size);
 	if (cal == NULL)
 		return (NULL);
 
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < total_size; i++)
 		cal[i] = 0;
 
 	return (cal);
