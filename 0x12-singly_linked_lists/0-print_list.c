@@ -10,7 +10,7 @@ size_t print_list(const list_t *h)
 {
     if (h != NULL)
     {
-         size_t num = 0;
+        size_t num = 0;
 
         for (; h != NULL; h = h->next)
         {
@@ -23,5 +23,5 @@ size_t print_list(const list_t *h)
 
         return (num);
     }
-    return (0);
+        return (0);
 }
